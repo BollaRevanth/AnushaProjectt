@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Welcome to the Quiz App</h1>
+    <div class="mb-3">
+        <a class="btn btn-outline-primary me-2" href="/register">Register</a>
+        <a class="btn btn-outline-secondary me-2" href="/login">Login</a>
+        <a class="btn btn-outline-success" href="/create_quiz">Create Quiz</a>
+    </div>
+    <h3>Available Quizzes</h3>
+    <ul class="list-group">
+        {% for quiz in quizzes %}
+        <li class="list-group-item"><a href="/quiz/{{ quiz.id }}/take">{{ quiz.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

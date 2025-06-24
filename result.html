@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Your Score</h2>
+    <p>You scored <strong>{{ score }}</strong> out of <strong>{{ total }}</strong></p>
+    <a href="/" class="btn btn-secondary">Go back to Home</a>
+</div>
+{% endblock %}
